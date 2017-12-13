@@ -1,19 +1,56 @@
 <!DOCTYPE html>
-<html>
+
+<html ng-app="patternfly.navigation" class="layout-pf layout-pf-fixed">
+
 <head>
-  <title></title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.31.2/css/patternfly-additions.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.31.2/css/patternfly.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="http://www.patternfly.org/angular-patternfly/grunt-scripts/jquery.js"></script>
+  <script src="http://www.patternfly.org/angular-patternfly/grunt-scripts/bootstrap.min.js"></script>
+  <script src="http://www.patternfly.org/angular-patternfly/grunt-scripts/d3.js"></script>
+  <script src="http://www.patternfly.org/angular-patternfly/grunt-scripts/c3.js"></script>
+  <script src="http://www.patternfly.org/angular-patternfly/grunt-scripts/patternfly-settings.js"></script>
+  <script src="http://www.patternfly.org/angular-patternfly/grunt-scripts/patternfly-settings-colors.js"></script>
+  <script src="http://www.patternfly.org/angular-patternfly/grunt-scripts/patternfly-settings-charts.js"></script>
+  <script src="http://www.patternfly.org/angular-patternfly/grunt-scripts/angular.js"></script>
+  <script src="http://www.patternfly.org/angular-patternfly/grunt-scripts/angular-dragdrop.js"></script>
+  <script src="http://www.patternfly.org/angular-patternfly/grunt-scripts/angular-datatables.js"></script>
+  <script src="http://www.patternfly.org/angular-patternfly/grunt-scripts/angular-datatables.select.min.js"></script>
+  <script src="http://www.patternfly.org/angular-patternfly/grunt-scripts/angular-sanitize.js"></script>
+  <script src="http://www.patternfly.org/angular-patternfly/grunt-scripts/angular-animate.js"></script>
+  <script src="http://www.patternfly.org/angular-patternfly/grunt-scripts/ui-bootstrap-tpls.js"></script>
+  <script src="http://www.patternfly.org/angular-patternfly/grunt-scripts/angular-bootstrap-prettify.js"></script>
+  <script src="http://www.patternfly.org/angular-patternfly/grunt-scripts/lodash.min.js"></script>
+  <script src="http://www.patternfly.org/angular-patternfly/grunt-scripts/angular-patternfly.js"></script>
+  <script src="http://www.patternfly.org/angular-patternfly/grunt-scripts/angular-ui-router.min.js"></script>
+  <script src="http://www.patternfly.org/angular-patternfly/grunt-scripts/angular-drag-and-drop-lists.js"></script>
   <script src="lib/jquery.js"></script>
   <script src="js/script.js"></script>
+
 </head>
-<body>
-  <h1 class="text-center"> Notes </h1>
-  <div class="text-center">
-    <input type="text" id="inpbox">
-    <input type="button" id="btn" value="Add Todo">
-  </div>
-  <h2>All Notes</h2>
-  <ul id="list">
-  </ul>
+
+<body id="verticalNavLayout" class="layout-pf layout-pf-fixed faux-layout" ng-controller="vertNavController">
+<pf-vertical-navigation - -basic items="navigations" brand-alt="NOTES APPLICATION" show-badges="true" pinnable-menus="true" update-active-items-on- click="true">
+
+      </pf-vertical-navigation - -basic>
+<div id="contentContainer" class="container-fluid container-cards-pf container-pf-nav-pf-vertical">
+<div>
+
+      <h1 class="text-center" > Notes </h1>
+      <div class="text-center">
+        <input type="text" id="inpbox" class="form-control marged">
+        <input type="button" id="btn" value="Add Todo" class="btn btn-info" >
+      </div>
+      <h2>All Notes</h2>
+      <ul id="list">
+      </ul>
+
+    </div>
+</div>
 </body>
+
 </html>
