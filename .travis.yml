@@ -1,0 +1,7 @@
+language: node_js
+
+sudo: enabled
+
+script:
+  - echo "Hello! This is Travis"
+

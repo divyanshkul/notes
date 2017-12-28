@@ -1,3 +1,17 @@
 .text-center {
   text-align: center;
+
+  font-family: 'Raleway', sans-serif;
+}
+.texts{
+	
+	font-family: 'Raleway', sans-serif;
+	font-size: 40px;
+
+}
+#btn{
+	margin-top: 15px;
+	width: 25%;
+	padding: 10px;
+	font-size: 15px;
 }
