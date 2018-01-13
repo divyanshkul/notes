@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.31.2/css/patternfly.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+
   <script src="http://www.patternfly.org/angular-patternfly/grunt-scripts/jquery.js"></script>
   <script src="http://www.patternfly.org/angular-patternfly/grunt-scripts/bootstrap.min.js"></script>
   <script src="http://www.patternfly.org/angular-patternfly/grunt-scripts/d3.js"></script>
@@ -29,27 +30,47 @@
   <script src="http://www.patternfly.org/angular-patternfly/grunt-scripts/angular-ui-router.min.js"></script>
   <script src="http://www.patternfly.org/angular-patternfly/grunt-scripts/angular-drag-and-drop-lists.js"></script>
   <script src="lib/jquery.js"></script>
-  <script src="js/script.js"></script>
+  <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Raleway" rel="stylesheet">
+
+ <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<!--
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+-->
 
 </head>
 <body>
-  
-  <div id="verticalNavLayout" class="layout-pf layout-pf-fixed faux-layout" ng-controller="vertNavController">
-    <pf-vertical-navigation - -basic items="navigations" class="texts" navigate-callback="handleNavigateClick" item-click-callback="handleNavigateClick" brand-alt="JBoss Notes" show-badges="true" pinnable-menus="true" update-active-items-on- click="true">
-	</pf-vertical-navigation - -basic>
-     <div id="contentContainer" class="container-fluid container-cards-pf container-pf-nav-pf-vertical">
-        <div>
-        <h1 class="text-center" > Notes </h1>
-        <div class="text-center">
-          <input type="text" id="inpbox" class="form-control marged">
-          <input type="button" id="btn-note" value="Add Todo" class="btn btn-info" >
+<!--<body id="verticalNavLayout" class="layout-pf layout-pf-fixed faux-layout" ng-controller="vertNavController">-->
+<div id="verticalNavLayout" class="layout-pf layout-pf-fixed faux-layout navbar bg" ng-controller="vertNavController">
+<pf-vertical-navigation - -basic items="navigations" class="texts" brand-alt="JBoss Notes" show-badges="true" pinnable-menus="true" update-active-items-on- click="true"> </pf-vertical-navigation - -basic>
+
+      <div id="contentContainer" class="container-fluid container-cards-pf container-pf-nav-pf-vertical">
+        <div class="borderSpaced">
+
+              <h1 class="text-center" > Add a reminder </h1> <br>
+              <div id='calendar' class="text-center">
+                Reminder Message:
+                <input type="text" name="reminderMsg"><br><br>
+                Reminder Date:
+                <input type="date" name="reminderDate"><br><br>
+                <input type="button" id="btn-reminder" value="Add Reminder" class="btn-note btn-info">
+              </div>
+              <br>
+
+              <h2 class="texts">All Reminders</h2>
+
+              <table id="list" cellpadding="10" cellspacing="20" width="100%" style="border-spacing: 40px 10px;">
+                
+              </table>
+
         </div>
-        <h2>All Notes</h2>
-        <ul id="list">
-        </ul>
       </div>
     </div>
-  </div>
 
 </body>
+  <script src="js/reminders.js"></script>
 </html>
